@@ -1,0 +1,52 @@
+/* ADD ALT TEXT FOR IMAGES!!!!! */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: scroll;
+}
+
+#bottom-bar {
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100vw;
+  padding: 1vh;
+  height: 2vh;
+  background-color: black;
+  color: white;
+  align-content: center;
+}
+
+.bb-option {
+  margin-right: 5vw;
+}
+
+#selected {
+  color: gold;
+  opacity: 100%;
+}
+
+.views {
+  position: absolute;
+  display: block;
+  width: 100vw;
+}
+
+a:active, a:link, a:visited {
+  opacity: 70%;
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 100%;
+}
