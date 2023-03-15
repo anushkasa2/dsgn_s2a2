@@ -12,6 +12,7 @@ function titleText(title_id, text_id, color) {
             title.style.background = color;
         } else {
             text.style.display = "none";
+            title.style.background = "none";
         }
     })
 }
