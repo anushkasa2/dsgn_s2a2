@@ -6,9 +6,9 @@
   
   h1 {
     margin: 0;
+    font-size: 8vw;
     padding: 10px;
     position: relative;
-    font-size: 5rem;
   }
   
   h2 {
@@ -80,7 +80,8 @@ h1::before {
     background-color: black;
     display: block;
     width: 100vw;
-    height: 40vh;
+    height: 70vh;
+    overflow: scroll;
   }
   
   .facts {

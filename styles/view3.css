@@ -1,6 +1,7 @@
-body {
+#view-3 {
   height: 600px;
   margin: 0;
+  top: 0;
   display: grid;
   grid-template-rows: 500px 100px;
   grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
@@ -8,15 +9,69 @@ body {
   justify-items: center;
 }
 
-main#carousel {
+.button {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  transform: translate(0, -40%);
+  margin: 2em 2em 2em 2em;
+}
+
+#button2 {
+  margin-left: 4em;
+}
+
+#button3 {
+  margin-left: 6em;
+}
+
+#button4 {
+  margin-left: 8em;
+}
+
+#button5 {
+  margin-left: 10em;
+}
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: red;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+
+#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 8;
+  position: absolute;
+  top: 10vh;
   width: 100vw;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   transform-style: preserve-3d;
   perspective: 600px;
   --items: 5;
@@ -25,10 +80,9 @@ main#carousel {
   pointer-events: none;
 }
 
-div.item {
+.item {
   position: absolute;
   max-width: 30vw;
-  max-height: 60vh;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
@@ -37,31 +91,47 @@ div.item {
   z-index: calc((var(--position) - var(--abs)));
 }
 
-.item.poster {
+.item {
+  height: 60vh;
+  overflow: visible;
+  background-color: white;
+}
+
+.poster {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     width: auto;
 }
 
-div.item:nth-of-type(1) {
+.back_poster {
+  margin-top: 3vh;
+  opacity: 100%;
+  text-transform: none;
+  background-color: white;
+  text-align: justify;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+/* Could be converted into SCSS for simplicity */
+
+.item:nth-of-type(1) {
   --offset: 1;
-  background-color: #90f1ef;
 }
-div.item:nth-of-type(2) {
+.item:nth-of-type(2) {
   --offset: 2;
-  background-color: #ff70a6;
 }
-div.item:nth-of-type(3) {
+.item:nth-of-type(3) {
   --offset: 3;
-  background-color: #ff9770;
 }
-div.item:nth-of-type(4) {
+.item:nth-of-type(4) {
   --offset: 4;
-  background-color: #ffd670;
 }
-div.item:nth-of-type(5) {
+.item:nth-of-type(5) {
   --offset: 5;
-  background-color: #e9ff70;
 }
 
 input:nth-of-type(1) {
